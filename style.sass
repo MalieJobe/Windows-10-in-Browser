@@ -1,14 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
 // Variables
-    
 $main: #0078D7
 $theme: #0a0f20da
 
-
 // Styles
-
 body
     margin: 0
     box-sizing: border-box
+    font-family: 'Roboto', sans-serif
 
 .windows10
     width: 100%
@@ -17,7 +17,7 @@ body
     position: relative
 
 .desktop
-    background-image: url('background.jpg')
+    background-image: url('assets/background.jpg')
     background-size: cover
     background-repeat: no-repeat
     width: 100%
@@ -33,3 +33,25 @@ body
     position: absolute
     bottom: 0
     left: 0
+    &__sysinfo
+        position: absolute
+        right: 0
+        top: 50%
+        transform: translateY(-50%)
+        height: 100%
+    &__apps
+        position: absolute
+        left: 0
+    &__element
+        display: inline
+        color: white
+        width: 8%
+        height: 100%
+        padding-right: 6px
+        padding-left: 6px
+        font-size: 13px
+        vertical-align: middle
+        transition: 0.2s
+        &:hover
+            background-color: rgba(255, 255, 255, 0.1)
+

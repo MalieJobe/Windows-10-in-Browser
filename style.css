@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 body {
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 .windows10 {
@@ -12,7 +14,7 @@ body {
 }
 
 .desktop {
-  background-image: url("background.jpg");
+  background-image: url("assets/background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -29,5 +31,36 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
+}
+
+.taskbar__sysinfo {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: 100%;
+}
+
+.taskbar__apps {
+  position: absolute;
+  left: 0;
+}
+
+.taskbar__element {
+  display: inline;
+  color: white;
+  width: 8%;
+  height: 100%;
+  padding-right: 6px;
+  padding-left: 6px;
+  font-size: 13px;
+  vertical-align: middle;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.taskbar__element:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 /*# sourceMappingURL=style.css.map */
