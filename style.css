@@ -45,6 +45,11 @@ body {
 .taskbar__apps {
   position: absolute;
   left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: 100%;
+  width: 25%;
 }
 
 .taskbar__element {
