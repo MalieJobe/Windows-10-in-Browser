@@ -90,4 +90,24 @@ body {
   background: #ffffff;
   outline: none;
 }
+
+.startmenu {
+  background-color: #0a0f20da;
+  position: absolute;
+  left: 0;
+  bottom: 7%;
+  height: 23%;
+  width: 20%;
+  padding: 15px;
+  padding-bottom: 10%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 5px;
+}
+
+.startmenu__tile {
+  background-color: #0078D7;
+}
 /*# sourceMappingURL=style.css.map */
