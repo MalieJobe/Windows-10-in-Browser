@@ -13,10 +13,20 @@
     <div class="desktop">
         <div class="desktop__icon"></div>
         <div class="desktop__icon"></div>
+
+        <div class="application">
+            <div class="application__bar">
+                <div class="application__control">_</div>
+                <div class="application__control">F</div>
+                <div class="application__control">X</div>
+            </div>
+            <video autoplay="true" id="videoElement"></video>
+        </div>
+        <div class="application"></div>
     </div>
     <div class="taskbar">
         <div class="taskbar__apps">
-            <img src="assets/windows.svg" alt="" class="taskbar__element taskbar__element--app">
+            <img src="assets/windows.svg" alt="" class="taskbar__element taskbar__element--app" id="startBtn">
             <img src="assets/search.svg" alt="" class="taskbar__element taskbar__element--app">
             <img src="assets/explorer.svg" alt="" class="taskbar__element taskbar__element--app">
         </div>
@@ -25,7 +35,7 @@
             <img src="assets/battery.svg" class="taskbar__element" alt="Battery level">
             <img src="assets/wifi.svg" class="taskbar__element" alt="Available Wifi Networks">
             <img src="assets/volume.svg" class="taskbar__element" alt="Control Volume">
-            <time class="taskbar__element">11:31</time>
+            <time class="taskbar__element" id="taskbartime">11:31</time>
         </div>
     </div>
     <div class="startmenu">

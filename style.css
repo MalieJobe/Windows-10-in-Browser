@@ -4,9 +4,11 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
+  font-size: 14px;
   max-height: 90vh;
   max-width: 90vw;
   background-color: #f1f1f1;
+  overflow-x: hidden;
 }
 
 .windows10 {
@@ -25,6 +27,45 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.application {
+  position: absolute;
+  width: 60%;
+  height: 70%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  overflow: hidden;
+  border: 5px solid black;
+}
+
+.application__bar {
+  width: 100%;
+  height: 8%;
+  background-color: black;
+  text-align: right;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.application__control {
+  color: #fff;
+  display: inline;
+  height: 100%;
+  padding: 1% 2%;
+  font-size: 90%;
+  background-color: #353535;
+  line-height: 200%;
+}
+
+.application video {
+  width: 100%;
+  margin-left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #ccc;
 }
 
 .taskbar {
@@ -58,12 +99,12 @@ body {
 .taskbar__element {
   display: inline;
   color: white;
-  width: 8%;
+  width: 10%;
   height: 100%;
   max-width: 20px;
-  padding-right: 5px;
-  padding-left: 5px;
-  font-size: 13px;
+  padding-right: 2%;
+  padding-left: 2%;
+  font-size: 80%;
   vertical-align: middle;
   -webkit-transition: 0.2s;
   transition: 0.2s;
@@ -72,6 +113,7 @@ body {
 .taskbar__element--app {
   padding-left: 4%;
   padding-right: 4%;
+  width: 8%;
 }
 
 .taskbar__element:hover {
@@ -101,22 +143,35 @@ body {
   position: absolute;
   left: 0;
   bottom: 7%;
-  height: 23%;
+  height: 0;
   width: 20%;
-  padding: 2%;
-  padding-bottom: 10%;
+  padding: 0%;
+  padding-bottom: 0%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 5px;
+  -webkit-transition: all 40ms ease-in-out;
+  transition: all 40ms ease-in-out;
+}
+
+.startmenu--active {
+  height: 23%;
+  padding: 2%;
+  padding-bottom: 10%;
 }
 
 .startmenu__tile {
   background-color: #0078D7;
   position: relative;
-  -webkit-animation: rotation 20s infinite linear;
-          animation: rotation 20s infinite linear;
+  -webkit-animation: flipcard 20s infinite linear;
+          animation: flipcard 20s infinite linear;
+}
+
+.startmenu__tile:hover {
+  background-color: #4a91ca;
+  border: 1px #fff solid;
 }
 
 .startmenu__tile img {
@@ -129,7 +184,7 @@ body {
           transform: translate(-50%, -50%);
 }
 
-@-webkit-keyframes rotation {
+@-webkit-keyframes flipcard {
   0% {
     -webkit-transform: rotateY(0deg);
             transform: rotateY(0deg);
@@ -152,7 +207,7 @@ body {
   }
 }
 
-@keyframes rotation {
+@keyframes flipcard {
   0% {
     -webkit-transform: rotateY(0deg);
             transform: rotateY(0deg);
