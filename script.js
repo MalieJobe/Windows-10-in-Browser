@@ -2,6 +2,8 @@
 const startBtn = document.getElementById('startBtn');
 const startmenu = document.querySelector('.startmenu');
 const taskbartime = document.getElementById('taskbartime');
+const calTime = document.getElementById('calTime');
+const calDate = document.getElementById('calDate');
 
 
 // Startmenu show/hide
@@ -10,18 +12,21 @@ startBtn.addEventListener('click', () => {
 })
 
 // display current time
-const months = ['January', 'February', 'March', 'April', 'Mai','June', 'July', 'August', 'September', 'October', 'November', 'December'];
+const months = ['January', 'February', 'March', 'April', 'May','June', 'July', 'August', 'September', 'October', 'November', 'December'];
+const weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 const updateClock = () => {
-    let now = new Date();
-    let seconds = now.getSeconds();
-    let minutes = now.getMinutes();
-    let hours = now.getHours();
-    let weekday = now.getDay();
-    let date = now.getDate();
-    let month = months[now.getMonth()];
-    let year = now.getFullYear();
+    const now = new Date();
+    const seconds = now.getSeconds();
+    const minutes = now.getMinutes();
+    const hours = now.getHours();
+    const weekday = weekdays[now.getDay() - 1];
+    const date = now.getDate();
+    const month = months[now.getMonth()];
+    const year = now.getFullYear();
 
     taskbartime.textContent = `${hours}:${minutes}`
+    calTime.textContent = `${hours}:${minutes}:${("0" + seconds).substr(-2,2)}`
+    calDate.textContent = `${weekday}, ${date} ${month} ${year}`
 
     setTimeout(updateClock, 1000);
 }

@@ -16,9 +16,9 @@
 
         <div class="application">
             <div class="application__bar">
-                <div class="application__control">_</div>
-                <div class="application__control">F</div>
-                <div class="application__control">X</div>
+                <div class="application__control application__control--min">_</div>
+                <div class="application__control application__control--full">F</div>
+                <div class="application__control application__control--close">X</div>
             </div>
             <video autoplay="true" id="videoElement"></video>
         </div>
@@ -53,8 +53,8 @@
     </div>
     <div class="syscards">
         <div class="syscards__card">
-            <time class="syscards__header syscards__header--large">22:05:24</time>
-            <time class="syscards__link">Saturday, 16th May 2020</time>
+            <time class="syscards__header syscards__header--large" id="calTime">22:05:24</time>
+            <time class="syscards__link" id="calDate">Saturday, 16th May 2020</time>
             <hr>
             <table class="calendar">
             <thead>

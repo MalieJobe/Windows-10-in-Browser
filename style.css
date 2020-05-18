@@ -121,21 +121,33 @@ body {
 }
 
 .syscards {
-  background-color: red;
+  background-color: #3f3e4dfd;
   position: absolute;
   right: 0;
   bottom: 7%;
   padding: 2%;
+  color: #fff;
+  height: 40%;
+  width: 20%;
 }
 
 .syscards__header {
   display: block;
+  font-size: 2rem;
 }
 
 .syscards__slider {
   width: 100%;
   background: #ffffff;
   outline: none;
+}
+
+hr {
+  border: 1px solid #6b6b6b;
+}
+
+.calendar {
+  color: #fff;
 }
 
 .startmenu {
