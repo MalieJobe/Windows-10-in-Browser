@@ -127,7 +127,9 @@ body {
   bottom: 7%;
   padding: 2%;
   color: #fff;
-  height: 40%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   width: 20%;
 }
 
@@ -148,6 +150,7 @@ hr {
 
 .calendar {
   color: #fff;
+  width: 100%;
 }
 
 .startmenu {
